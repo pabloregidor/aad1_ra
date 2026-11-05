@@ -1,12 +1,12 @@
 # CHECKLIST — AAD1 Smart City (vivo; actualizar en cada paso cerrado)
 
-Estado: 🟡 en curso · Última actualización: 2026-11-05 (repo git + push inicial)
+Estado: 🟡 en curso · Última actualización: 2026-11-05 (Paso 2 cerrado: topología verbinda + bases reutilizadas confirmadas)
 
 ## Tareas
 - [x] Paso 1: Leer el enunciado completo (`AAD1.Smart_City.pdf`) y extraer la lista de requisitos limpia.
 - [x] Crear `AGENTS.md` con reglas de trabajo y lista negra de exclusión.
 - [x] `git init` + commit + push ✅ — remoto: `https://github.com/pabloregidor/aad1_ra.git` (rama `main`). Per-commit por cerrar cada paso.
-- [ ] Paso 2 (propuesto): revisar la memoria de la AAD1 anterior (`AAD1_PabloRegidorGarcia.md`) para fijar la MISMA topología de partida → pendiente de "ok" del usuario.
+- [x] Paso 2: Fijar base de partida. DECISIÓN DEL USUARIO (2026-11-05): se reutiliza NO solo la topología sino TODO el planteamiento general de la memoria anterior. Documento de trabajo: `aad1_ra.docx` con la captura de topología CORREGIDA (ahora incluye Cloud-PT ISP_Internet, que faltaba). Topología: R_Ayuntamiento+SW_Core (3650-24PS, servers, PC0-PC1) · R_Policia+SW (2960, PC2-PC4) · R_Turismo+SW (2960, PC5-PC6) · Teletrabajador (HomeRouter-PT-AC + Laptop), todo vía Cloud-PT ISP.
 - [ ] Definir rol de la red WAN (empresa / ISP clientes / ISP-ISP) y necesidades de conectividad (Tarea 1).
 - [ ] Identificar redes, usuarios y servicios a conectar (Tarea 1).
 - [ ] Seleccionar arquitectura WAN + comparar alternativas tecnológicas con justificación (Tarea 1).
