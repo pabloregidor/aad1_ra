@@ -1,0 +1,28 @@
+{
+  "schema": "ppt-master.source_to_md.profile.v1",
+  "converter": "pdf_to_md.py",
+  "conversion_type": "pdf",
+  "source": {
+    "path": "AAD1_PabloRegidorGarcia.pdf",
+    "name": "AAD1_PabloRegidorGarcia.pdf",
+    "suffix": ".pdf",
+    "kind": "file",
+    "exists": true,
+    "size_bytes": 219706
+  },
+  "outputs": {
+    "markdown": "AAD1_PabloRegidorGarcia.md",
+    "asset_dir": "AAD1_PabloRegidorGarcia_files",
+    "image_manifest": "AAD1_PabloRegidorGarcia_files/image_manifest.json",
+    "image_count": 1
+  },
+  "markdown": {
+    "line_count": 353,
+    "char_count": 21545,
+    "heading_count": 25,
+    "table_count": 2,
+    "image_ref_count": 1,
+    "link_count": 0
+  },
+  "warnings": []
+}

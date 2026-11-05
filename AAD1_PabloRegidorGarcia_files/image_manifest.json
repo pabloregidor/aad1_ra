@@ -1,0 +1,25 @@
+[
+  {
+    "index": 1,
+    "filename": "AAD1_PabloRegidorGarcia_p4_0.png",
+    "original_filename": "AAD1_PabloRegidorGarcia_p4_0.png",
+    "asset_kind": "bitmap",
+    "svg_renderable": true,
+    "pptx_native_supported": true,
+    "source_kind": "pdf_image",
+    "source_ext": ".png",
+    "page_index": 4,
+    "occurrence_index": 1,
+    "pixel_width": 880,
+    "pixel_height": 575,
+    "pixel_ratio": 1.530435,
+    "display_ratio": 1.530435,
+    "source_sha256": "06bfaf8f77d01cb439c55398dc36ff4d1c9a22de30511099e2bbac84e1359b15",
+    "bbox": [
+      59.56748962402344,
+      333.95269775390625,
+      561.62841796875,
+      662.00390625
+    ]
+  }
+]
