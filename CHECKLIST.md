@@ -1,12 +1,12 @@
 # CHECKLIST — AAD1 Smart City (vivo; actualizar en cada paso cerrado)
 
-Estado: 🟡 en curso · Última actualización: 2026-11-04 (Paso 1)
+Estado: 🟡 en curso · Última actualización: 2026-11-05 (repo git + push inicial)
 
 ## Tareas
 - [x] Paso 1: Leer el enunciado completo (`AAD1.Smart_City.pdf`) y extraer la lista de requisitos limpia.
 - [x] Crear `AGENTS.md` con reglas de trabajo y lista negra de exclusión.
-- [ ] `git init` en el directorio (aún NO es repo git; los commits por paso lo requieren).
-- [ ] Paso 2 (propuesto): revisar la memoria de la AAD1 anterior (`AAD1_PabloRecidorGarcia.md`) para fijar la MISMA topología de partida → pendiente de "ok" del usuario.
+- [x] `git init` + commit + push ✅ — remoto: `https://github.com/pabloregidor/aad1_ra.git` (rama `main`). Per-commit por cerrar cada paso.
+- [ ] Paso 2 (propuesto): revisar la memoria de la AAD1 anterior (`AAD1_PabloRegidorGarcia.md`) para fijar la MISMA topología de partida → pendiente de "ok" del usuario.
 - [ ] Definir rol de la red WAN (empresa / ISP clientes / ISP-ISP) y necesidades de conectividad (Tarea 1).
 - [ ] Identificar redes, usuarios y servicios a conectar (Tarea 1).
 - [ ] Seleccionar arquitectura WAN + comparar alternativas tecnológicas con justificación (Tarea 1).
@@ -29,5 +29,5 @@ Estado: 🟡 en curso · Última actualización: 2026-11-04 (Paso 1)
 | — (pendiente: equipos, precios) | — | NO VERIFICADO |
 
 ## Errores abiertos / avisos
-- El directorio AAD1 NO es un repo git todavía → pendiente `git init` para poder hacer commits por paso.
+- ~~El directorio AAD1 NO es un repo git~~ → RESUELTO (2026-11-05): repo git + remoto `pabloregidor/aad1_ra` en GitHub.
 - La carpeta `projects/smart_city_wan_granada_20261021/` es material de la iteración anterior: solo servirà de referencia de topología; NO reutilizar textos verbatim.
