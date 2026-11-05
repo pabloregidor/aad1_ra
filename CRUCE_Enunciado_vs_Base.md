@@ -15,7 +15,7 @@ AVISO TRAMPA: la memoria anterior contiene la trampa nº 1 del enunciado (la fra
 | Estudiar tipos de redes WAN (empresariales, ISP, entre ISP) | contexto académico; basta con dejar constancia de los tres tipos al elegir el rol | [REUTILIZAR] |
 | Rol de la red elegido (1 de los 3) | red de EMPRESA: el ayuntamiento conecta LAN central + sucursales + teletrabajadores | [REUTILIZAR] |
 | Necesidades de conectividad | 3 pilares: (1) disponibilidad y baja latencia para emergencias, videovigilancia y tránsito en tiempo real; (2) confidencialidad de datos de ciudadanos → segmentar tráfico; (3) acceso remoto cifrado del funcionariado con VoIP | [REUTILIZAR] concepto · [ADAPTAR] redacción |
-| Redes, usuarios y servicios a conectar | 4 dominios: nodo central (CPD + administración + portal), sucursal policial (control de tráfico + videovigilancia), oficina de turismo (administrativos + red pública aislada de visitantes), teletrabajador (portátil + router doméstico). La captura corregida fija los equipos: PC0-PC1 (Ayto), PC2-PC4 (Policía), PC5-PC6 (Turismo), Laptop (teletrabajo), 2 servidores centrales | [REUTILIZAR] |
+| Redes, usuarios y servicios a conectar | 4 dominios: nodo central (CPD + administración + portal), sucursal policial (control de tráfico + videovigilancia), oficina de turismo (administrativos + red pública aislada de visitantes), teletrabajador (portátil + router doméstico). La captura corregida (2ª versión, 05-11) fija los equipos: PC0-PC1 (Ayto, colgados del switch de acceso de sede), PC2-PC3 (Policía), PC4-PC5 (Turismo), Laptop (teletrabajo), 2 servidores centrales | [REUTILIZAR] |
 | Arquitectura WAN seleccionada | estrella hub-and-spoke con nodo central como concentrador y sucursales/teletrabajo colgadas de la red pública; la captura corregida añade el Cloud-PT del ISP que faltaba | [REUTILIZAR] |
 | Tecnologías posibles + comparar alternativas y justificar | la base solo traía una comparación breve contra la línea arrendada; falta el bloque completo de opciones (dedicada, VPN L3 del operador, banda ancha comercial, WAN inalámbrica 4G/5G) con tabla ventajas/desventajas vds. los 6 criterios del enunciado de la Tarea 3 | [ADAPTAR] trabajo nuevo |
 | Diagrama lógico inicial Packet Tracer | captura corregida, entregada por el usuario en `aad1_ra.docx` | ✅ HECHO |
@@ -38,9 +38,11 @@ AVISO TRAMPA: la memoria anterior contiene la trampa nº 1 del enunciado (la fra
 | C) Tránsito por la red del operador | bucle local del ISP: fibra o par trenzado GigE hasta la interfaz del router de sede | Ethernet de extremo a extremo; conmutación interna del operador por etiquetas (MPLS) como detalle del proveedor | [ADAPTAR] aclarar que el MPLS es del operador: no se compra ni presupuesta |
 | D) Wi-Fi | bandas 2,4 GHz / 5 GHz | 802.11 con CSMA/CA y WPA2/WPA3 en el tramo local; al llegar al router doméstico se desencapsula a Ethernet y sigue por el túnel | [REUTILIZAR] |
 
+#### Nota de revisión del 05-11 (2ª captura del usuario)
+NOTA DE REVISIÓN 05-11 (2ª captura del usuario): la captura definitiva del `aad1_ra.docx` coloca también en el Ayuntamiento un switch de acceso 2960-24TT (por defecto "Switch0"; sugerencia: renombrarlo SW_Ayto) entre los equipos finales y el switch núcleo 3650-24PS, que a su vez une con R_Ayuntamiento. Consecuencias: (a) la topología tiene 3 switches de acceso de sede (Ayto + Policía + Turismo), así que las 3 unidades del presupuesto anterior eran correctas; (b) el 3650-24PS queda con rol de núcleo: enrutamiento entre subredes internas y alimentación PoE; (c) los PCs de Turismo pasan a ser PC4-PC5 y Policía PC2-PC3.
+
 ### Listado de equipos, medios y presupuesto
-- [ERROR] el presupuesto anterior contaba **3 unidades** de switch de acceso (2960-24TT); la topología real solo tiene **2** (Policía + Turismo). Corregir.
-- [ERROR] los equipos de teletrabajo (HomeRouter-PT-AC + Laptop) no estaban en el listado ni el presupuesto → añadir con referencia y precio.
+- [ERROR] los equipos de teletrabajo (HomeRouter-PT-AC + Laptop) no estaban en el listado ni en el presupuesto → añadir con referencia y precio.
 - [ERROR] incoherencia: el texto viejo hablaba de "equipo de acceso DSL" para el acceso remoto, pero la captura usa HomeRouter-PT-AC. Unificar en un único acceso.
 - [VERIFICAR] comprobar EOL de los modelos con fuente web antes de presupuestar (ISR 4331, Catalyst 3650-24PS y en especial Catalyst 2960-24TT-L, línea con años en fin de vida; si está descatalogado, proponer sustituto comercializable, p. ej. gama Catalyst 1300). Por cada equipo: URL de fabricante/mayorista + precio unitario, buscados de 0.
 - [ADAPTAR] presupuesto: la estructura CAPEX (equipos + tendido) + OPEX (líneas WAN 12 meses) sirve de esqueleto, pero recalcular con precios verificados hoy.
@@ -51,8 +53,8 @@ El escenario de la iteración anterior (nuevo grupo de usuarios en Turismo: VLAN
 ## TAREA 3 — Reflexión
 - íntegramente material nuevo según los requisitos de la Tarea 3 (elementos clave, decisiones, alternativa si cambian necesidades, ventajas/desventajas en las 6 dimensiones, mejora concreta, dificultades). Configura la lista de decisiones que alimentas al redactar en su momento.
 
-## Defectos detectados en la iteración anterior (resumen)
-1. Cantidad de switches de acceso errónea en presupuesto (3 vs 2 reales) [ERROR]
+## Defectos detectados en la iteración anterior (resumen; tras 2ª captura del 05-11)
+1. ~~Cantidad de switches de acceso en presupuesto (3 vs 2)~~ → FALSA ALARMA: la 2ª captura añade SW_Ayto (Switch0) en Ayuntamiento; las 3 unidades son correctas [RESUELTO]
 2. HomeRouter-PT-AC + Laptop fuera del listado y del presupuesto [ERROR]
 3. Incoherencia DSL vs HomeRouter-PT-AC en el acceso remoto [ERROR]
 4. Justificación de conmutación de paquetes insuficiente (tecnología obligatoria) [ADAPTAR]
